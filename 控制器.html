@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Document</title><script src="js/angular.min.js"></script><style>#caidan{
+             margin:20px 0px 0px 20px;
+         }
+         input[type="text"]:focus{
+             border:1px solid darkturquoise;
+         }
+         input[type="text"]{
+             margin-top: 5px;
+             border:1px solid #666;
+         }
+         input[type="text"].last{
+             width:240px;
+         }</style></head><body><div ng-controller="personCtrl" id="caidan">省份:<input type="text" ng-model="province"><br>城市:<input type="text" ng-model="country"><br>乡镇:<input type="text" ng-model="tour"><br>详细地址:<input type="text" class="last" value="{{address()}}"><!--        详细地址:{{address()}},这样不利于修改--></div><script>var app=angular.module('kongzhiApp',[]);
+    app.controller('personCtrl',function($scope){   //隐式的依赖注入
+        $scope.province="";
+        $scope.country="";
+        $scope.tour="";
+        $scope.address=function(){
+            return $scope.province+$scope.country+$scope.tour;
+        }
+    });
+         angular.bootstrap(document,['kongzhiApp']);</script></body></html>

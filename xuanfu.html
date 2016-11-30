@@ -1,0 +1,30 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title><link rel="stylesheet" type="text/css" href="xuanfu/jquery-ui.min.css"><style type="text/css">*{padding: 0;margin: 0;}
+	  	.mydiv1,.mydiv2,.mydiv3,.mydiv4,.mydiv5{
+	  		width: 200px;
+	  		height: 200px;
+	  		float: left;
+	  		border: 1px solid gray;
+	  		margin-left: 10px;
+	  	}
+	  	.mydiv1{background:url(xuanfu/images/11.jpg) no-repeat;background-size: cover;}
+	  	.mydiv2{background:url(xuanfu/images/22.jpg) no-repeat;background-size: cover;}
+	  	.mydiv3{background:url(xuanfu/images/33.jpg) no-repeat;background-size: cover;}
+	  	.mydiv4{background:url(xuanfu/images/44.jpg) no-repeat;background-size: cover;}
+	  	.mydiv5{background:url(xuanfu/images/55.jpg) no-repeat;background-size: cover;}
+	  	.fudiv{
+         position: absolute;
+         z-index: 1001;
+         width:200px;
+         height:200px;
+         background-color:rgba(0,0,0,0.5);
+         /*border: 1px solid gray;*/
+         margin-top:-21px; /**/
+         line-height: 200px;color:#fff;font-size:30px;text-align: center;
+	  	}</style></head><body><div class="mydiv1">111<div class="fudiv">副本一</div></div><div class="mydiv2">222<div class="fudiv">副本二</div></div><div class="mydiv3">333<div class="fudiv">副本三</div></div><div class="mydiv4">444<div class="fudiv">副本四</div></div><div class="mydiv5">555<div class="fudiv">副本五</div></div><script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script><script src="xuanfu/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script><script type="text/javascript">$(function(){
+	  	$(".fudiv").hide();
+	  	$(".mydiv1,.mydiv2,.mydiv3,.mydiv4,.mydiv5").hover(function(){
+	//$(this).find(".fudiv").show().parent().siblings().find(".fudiv").hide();
+            $(this).find(".fudiv").effect("clip",{mode:'show',times:1},600)
+            .parent().siblings().find(".fudiv").hide();
+	  	});
+	  });</script></body></html>

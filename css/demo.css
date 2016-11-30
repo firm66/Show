@@ -1,0 +1,53 @@
+html,body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p,span, blockquote, th, td, textarea, input { 
+    margin:0;
+    padding:0;
+}
+ul,li{list-style-type: none;}
+img{border:0;}
+body {
+	font-family:"microsoft yahei",helvetica, arial, sans-serif;
+    font-size: 16px;
+    font-weight:normal;
+	color: #333;
+}
+h1#banner {
+    font-family:helvetica, arial, sans-serif;
+    padding: 15px; background-color: #06b;
+    color: white; 
+    font-size:28px; 
+    border-bottom: 1px solid #aaa;
+    background: url(../images/bg.gif) repeat-x; text-align: center; 
+}
+      #left{
+      	  position:relative;
+           width:14%;
+           height:598px;
+          overflow: scroll;
+        }
+#left a,#left a:hover{
+	text-decoration: none;
+    color:#333;
+}
+        #main{
+            position: relative;
+        	width:86%;
+            height:700px;
+            margin-left: 14%; /*防止main位置改变*/
+        	margin-top:-598px;
+        	background-color:rgba(232,232,232,0.7);
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        #left #browser {
+        	width:100%;
+        }
+        #left #browser li{
+        	cursor:pointer;
+            padding-top:6px;
+        	border:1px solid #ccc;
+        	border-top:none;
+            background-color:#fff;
+        }
+         #left #browser li li{
+         	border:none;
+         }

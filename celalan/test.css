@@ -1,0 +1,84 @@
+html,body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p,span, blockquote, th, td, textarea, input { 
+    margin:0;
+    padding:0;
+}
+ul,li{list-style-type: none;}
+img{border:0;}
+body{
+    font-family:"microsoft yahei", Helvetica, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight:normal;
+}
+#celalan_header{
+    height:80px;
+    background-color:darkcyan;
+    font-family:"宋体", Helvetica, Verdana, sans-serif;
+    color:aliceblue;
+    text-align: center;
+    line-height: 80px;
+}
+#celalan_left
+{
+    position: relative;
+    float: left;
+    height: 750px;
+    background-color:#333f51;
+    color: #fff;
+    width: 18%;
+    overflow: hidden;
+}
+#celalan_left ul .li
+{
+    text-align: center;
+    border-bottom:2px solid gray;
+    line-height:40px;
+}
+#celalan_left ul .li:hover{
+    background-color:#333465;
+}
+#celalan_left a
+{
+    text-decoration:none;
+    color: #fff;
+}
+#celalan_left a:hover
+{
+    color:lightblue;
+}
+#celalan_left ul ul
+{
+    background-color:slategray;
+    overflow: hidden;
+}
+#celalan_left ul ul li
+{
+    text-align: left;
+    padding-left: 15px;
+    line-height: 30px;
+    border-bottom:1px solid #999;
+    box-sizing: border-box;
+}
+.myclick{
+    background-color:#333465;
+}
+#celalan_span
+{
+    position: relative;
+    float: left;
+    background-color: silver;
+    width:2%;
+    height: 750px;
+    padding-top:300px;
+    box-sizing: border-box;
+    text-align: center;
+}
+#celalan_main
+{
+    position:relative;
+    float:left;
+    height: 750px;
+    width: 80%;
+    background-color:salmon;
+    padding:15px;
+    box-sizing: border-box;
+}

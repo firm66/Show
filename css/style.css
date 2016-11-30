@@ -1,0 +1,10 @@
+//利用多栏布局, columns属性
+#main{
+	-webkit-column-width: 202px;//列宽
+	-moz-column-width: 202px;
+	-o-column-width: 202px;
+	-ms-column-width:202px;
+}
+.pic{
+	width:165px;
+}

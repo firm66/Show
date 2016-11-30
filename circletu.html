@@ -1,0 +1,389 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>环形图</title><script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script><script src="http://echarts.baidu.com/build/dist/echarts.js"></script></head><body><div id="circle_main" style="width: 600px;height:360px"></div><script type="text/javascript">//路径配置,第一步
+		  require.config({    
+            paths:{   
+                 echarts: 'http://echarts.baidu.com/build/dist'
+            }  
+        });  
+          // 使用 ，第二步
+        require(  
+            [  
+                'echarts',  
+                'echarts/chart/pie', // 使用柱状图就加载bar模块，按需加载  
+                'echarts/chart/funnel'
+            ],  
+             function (ec) {  
+                // 基于准备好的dom，初始化echarts图表  
+			 var myChart = ec.init(document.getElementById('circle_main')); 
+	
+var labelTop = {
+    normal : {
+        label : {
+            show : true,
+            position : 'center',
+            formatter : '{b}',
+            textStyle: {
+                baseline : 'bottom'
+            }
+        },
+        labelLine : {
+            show : false
+        }
+    }
+};
+var labelFromatter = {
+    normal : {
+        label : {
+            formatter : function (params){
+                return 100 - params.value + '%'
+            },
+            textStyle: {
+                baseline : 'top'
+            }
+        }
+    },
+}
+var labelBottom = {
+    normal : {
+        color: '#ccc',
+        label : {
+            show : true,
+            position : 'center'
+        },
+        labelLine : {
+            show : false
+        }
+    },
+    emphasis: {
+        color: 'rgba(0,0,0,0)'
+    }
+};
+var radius = [40, 55];
+option = {
+    legend: {
+        x : 'center',
+        y : 'center',
+        data:[
+            'HTML5','CSS3','Js','JQuery','Ajax',
+            'Node', 'Git', 'ECharts', 'BootStrap', 'Angular'
+        ]
+    },
+    title : {
+        text: 'The Study Situation',
+        subtext: 'web front end study',
+        x: 'center'
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            dataView : {show: true, readOnly: false},
+            magicType : {
+                show: true, 
+                type: ['pie', 'funnel'],
+                option: {
+                    funnel: {
+                        width: '20%',
+                        height: '30%',
+                        itemStyle : {
+                            normal : {
+                                label : {
+                                    formatter : function (params){
+                                        return 'other\n' + params.value + '%\n'
+                                    },
+                                    textStyle: {
+                                        baseline : 'middle'
+                                    }
+                                }
+                            },
+                        } 
+                    }
+                }
+            },
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    series : [
+        {
+            type : 'pie',
+            center : ['10%', '30%'],  /*位置*/
+            radius : radius,
+            x: '0%', // for funnel
+            itemStyle : labelFromatter,
+            data : [
+                {name:'other', value:15, itemStyle : labelBottom},  /*总和100*/
+                {name:'HTML5', value:85,itemStyle : labelTop}
+            ]
+        },
+        {
+            type : 'pie',
+            center : ['30%', '30%'],
+            radius : radius,
+            x:'20%', // for funnel
+            itemStyle : labelFromatter,
+            data : [
+                {name:'other', value:25, itemStyle : labelBottom},
+                {name:'CSS3', value:75,itemStyle : labelTop}
+            ]
+        },
+        {
+            type : 'pie',
+            center : ['50%', '30%'],
+            radius : radius,
+            x:'40%', // for funnel
+            itemStyle : labelFromatter,
+            data : [
+                {name:'other', value:35, itemStyle : labelBottom},
+                {name:'Js', value:65,itemStyle : labelTop}
+            ]
+        },
+        {
+            type : 'pie',
+            center : ['70%', '30%'],
+            radius : radius,
+            x:'60%', // for funnel
+            itemStyle : labelFromatter,
+            data : [
+                {name:'other', value:30, itemStyle : labelBottom},
+                {name:'JQuery', value:70,itemStyle : labelTop}
+            ]
+        },
+        {
+            type : 'pie',
+            center : ['90%', '30%'],
+            radius : radius,
+            x:'80%', // for funnel
+            itemStyle : labelFromatter,
+            data : [
+                {name:'other', value:70, itemStyle : labelBottom},
+                {name:'Ajax', value:30,itemStyle : labelTop}
+            ]
+        },
+        {
+            type : 'pie',
+            center : ['10%', '70%'],
+            radius : radius,
+            y: '55%',   // for funnel
+            x: '0%',    // for funnel
+            itemStyle : labelFromatter,
+            data : [
+                {name:'other', value:80, itemStyle : labelBottom},
+                {name:'Node', value:20,itemStyle : labelTop}
+            ]
+        },
+        {
+            type : 'pie',
+            center : ['30%', '70%'],
+            radius : radius,
+            y: '55%',   // for funnel
+            x:'20%',    // for funnel
+            itemStyle : labelFromatter,
+            data : [
+                {name:'other', value:20, itemStyle : labelBottom},
+                {name:'Git', value:80,itemStyle : labelTop}
+            ]
+        },
+        {
+            type : 'pie',
+            center : ['50%', '70%'],
+            radius : radius,
+            y: '55%',   // for funnel
+            x:'40%', // for funnel
+            itemStyle : labelFromatter,
+            data : [
+                {name:'other', value:30, itemStyle : labelBottom},
+                {name:'ECharts', value:70,itemStyle : labelTop}
+            ]
+        },
+        {
+            type : 'pie',
+            center : ['70%', '70%'],
+            radius : radius,
+            y: '55%',   // for funnel
+            x:'60%', // for funnel
+            itemStyle : labelFromatter,
+            data : [
+                {name:'other', value:20, itemStyle : labelBottom},
+                {name:'BootStrap', value:80,itemStyle : labelTop}
+            ]
+        },
+        {
+            type : 'pie',
+            center : ['90%', '70%'],
+            radius : radius,
+            y: '55%',   // for funnel
+            x:'80%', // for funnel
+            itemStyle : labelFromatter,
+            data : [
+                {name:'other', value:40, itemStyle : labelBottom},
+                {name:'Angular', value:60,itemStyle : labelTop}
+            ]
+        }
+    ]
+};
+                    
+			 myChart.setOption(option); 
+			 }
+           );</script><div id="circle_main2" style="width: 600px;height:330px"></div><script type="text/javascript">//路径配置
+		  require.config({    
+            paths:{   
+                 echarts: 'http://echarts.baidu.com/build/dist'
+            }  
+        });  
+          // 使用 
+        require(  
+            [  
+                'echarts',  
+                'echarts/chart/wordCloud' //记得改这个
+            ],  
+             function (ec) {  
+                // 基于准备好的dom，初始化echarts图表  
+			 var myChart = ec.init(document.getElementById('circle_main2')); 
+			 
+
+function createRandomItemStyle() {
+    return {
+        normal: {
+            color: 'rgb(' + [
+                Math.round(Math.random() * 160),
+                Math.round(Math.random() * 160),
+                Math.round(Math.random() * 160)
+            ].join(',') + ')'
+        }
+    };
+}
+
+option = {
+    title: {
+        text: 'firm66\'s blog',
+        link: 'http://www.google.com/trends/hottrends'
+    },
+    tooltip: {
+        show: true
+    },
+    series: [{
+        name: 'Google Trends',
+        type: 'wordCloud',
+        size: ['80%', '80%'],
+        textRotation : [0, 45, 90, -45],
+        textPadding: 0,
+        autoSize: {
+            enable: true,
+            minSize: 14
+        },
+        data: [
+            {
+                name: "WEB前端",
+                value: 10000,
+                itemStyle: {
+                    normal: {
+                        color: 'black'
+                    }
+                }
+            },
+            {
+                name: "技术板块",
+                value: 6181,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "励志文库",
+                value: 4386,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "资源干货",
+                value: 4055,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "随笔",
+                value: 2467,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "青春",
+                value: 2244,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "hexo+github搭建博客",
+                value: 1898,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "好用的软件总结",
+                value: 1484,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "phpStudy安装教程",
+                value: 1112,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "web前端学习路线",
+                value: 965,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "我的书架",
+                value: 847,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "女生的梦想，蛮好的!",
+                value: 582,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "简历",
+                value: 555,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "GitHub",
+                value: 550,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "软件安装教程",
+                value: 462,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "我的微博",
+                value: 366,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "我的知乎",
+                value: 360,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "博客分类",
+                value: 282,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "博客归档",
+                value: 273,
+                itemStyle: createRandomItemStyle()
+            },
+            {
+                name: "博客标签",
+                value: 265,
+                itemStyle: createRandomItemStyle()
+            }
+        ]
+    }]
+};
+                    
+			  myChart.setOption(option); 
+			 }
+           );</script></body></html>	  myChart.setOption(option); 
+			 }
+           );
+		</script>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+#pageone .ui-panel-inner{  /*去除padding*/
+	padding:0;
+}
+#pageone{
+	height:100%;overflow:hidden;
+}
+#pageone #bg{
+width:17em;height:270px;
+background:url(../images/a.jpg) no-repeat;
+background-size:cover;
+}
+#pageone #bg img{
+width:40px;height:40px;
+border-radius:50%;
+position:absolute;
+top:224px; left: 20px;
+z-index: 1001;
+}
+#pageone #bg span{
+position:absolute;
+top:220px;left:76px;
+font-size:20px;
+color:#FFFFFF;
+}
+#pageone #myPanel .ui-listview{
+	margin-left:0px;
+	width:17em;
+}
+#pageone #myPanel .ui-listview a{
+	background:#FFFFFF;
+}
+#pageone #myPanel .ui-listview a.ui-icon-mail{ /*注意*/
+	border-bottom:none;
+}
+#pageone .ui-header a.ui-btn,#new_reminder a.ui-btn{
+    padding-left: 10px;
+}
+#pageone .ui-header,#new_reminder .ui-header{
+	background: #FFFFFF;
+}
+#pageone #myPopup{
+   width:200px;
+}
+#pageone #myPopup ul li a.ui-btn{
+	 text-align:center;
+}
+#pageone .ui-header a.ui-btn:focus,#pageone .ui-footer a.ui-btn:focus{
+	background: #FFFFFF;
+}
+
+#new_reminder .ui-input-text{
+	margin:0;	
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-radius: 0;
+}
+#pagetwo .ui-header,#pagethree .ui-header,#pagefour .ui-header{
+    background-color:#FFF;
+}

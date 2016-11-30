@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Document</title><script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script><style type="text/css">*{margin: 0;padding: 0;}
+  ul,li{ list-style-type: none;}
+   ul>li.link{
+      float:left; 
+      background-color:darkgray; 
+      height:40px; line-height:40px;
+    /*  padding:0px 15px;*/  /*后面的ul li不好设置*/
+      /*width:120px; text-align:center;*/ /*设置下面的a更妙*/
+      font-size: 20px;
+      border-right:1px solid #ccc;
+    border-top-left-radius:180px 15px;  /*可不加*/
+    border-top-right-radius:150px 30px;
+    border-bottom-left-radius:40px 60px;
+    border-bottom-right-radius:150px 30px;
+   }
+   ul>li.link a{text-decoration: none;padding: 0px 15px;}
+   ul>li>ul{
+    font-size:16px;
+   }
+   ul>li.link>ul>li{
+    background-color:#dfdfdf;
+    text-align:center;
+     border-top-left-radius:120px 50px;
+    border-top-right-radius:120px 50px;
+    border-bottom-left-radius:150px 50px;
+    border-bottom-right-radius:150px 50px;
+   }</style></head><body><nav><ul><li class="link"><a class="abc" href="javascript:void(0)">网站首页</a><!--href="javascript:void(0)"也很重要--><ul><li><a href="">个人网站</a></li><li><a href="">企业网站</a></li><li><a href="">博客网站</a></li></ul></li><li class="link"><a class="abc" href="javascript:void(0)">关于我们</a><ul><li><a href="">公司简介</a></li><li><a href="">公司荣誉</a></li><li><a href="">公司简介</a></li><li><a href="">公司荣誉</a></li></ul></li><li class="link"><a class="abc" href="javascript:void(0)">成功案列</a><ul><li><a href="">金属字</a></li><li><a href="">发光字</a></li><li><a href="">钻石字</a></li></ul></li><li class="link"><a class="abc" href="javascript:void(0)">我们服务</a><ul><li><a href="">导引系统</a></li><li><a href="">服务系统</a></li><li><a href="">指南系统</a></li></ul></li><li class="link"><a class="abc" href="javascript:void(0)">联系我们</a><ul><li><a href="">电话号码</a></li><li><a href="">微信号</a></li><li><a href="">公众号</a></li></ul></li></ul></nav><script type="text/javascript">$(function(){
+    $(".link ul").hide();
+    $(".link .abc").click(function(){
+      $(this).parent().find("ul").slideToggle().parent().siblings().find("ul").slideUp();
+    });
+   });</script></body></html>

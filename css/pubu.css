@@ -1,0 +1,24 @@
+html,body,div,img,h1,h2,h3,h4,h5,h6,p,a,span{
+	padding:0;
+	margin:0;
+}
+img{
+	border:0;
+}
+#main{
+	position: relative;/*相对定位*/
+}
+.box{
+	padding: 15px 0 0 15px; /*推荐用padding*/
+	float: left;
+}
+.pic{
+	padding: 10px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #ccc;
+}
+.pic img{
+	width:165px;  /*等宽不等高*/
+	height:auto;
+}

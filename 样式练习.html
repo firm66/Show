@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>选择样式</title><script type="text/javascript">function change(){
+   var selNode=document.getElementById("selid0");    /*背景*/
+    var val=selNode.options[selNode.selectedIndex].value;
+            var cssNode=document.getElementById("cssid-00");  
+            var textNode=document.getElementById("textid0");
+            cssNode.style.backgroundColor=val;  //通过改变textTransform
+            textNode.innerText="背景:"+val+";";
+            
+            var sel1Node=document.getElementById("selid1");
+           var val1=sel1Node.options[sel1Node.selectedIndex].value;
+            var cssNode1=document.getElementById("cssid-01");  
+            var textNode1=document.getElementById("textid1");
+            cssNode1.style.backgroundImage="url("+val1+")";  //url不能忘了设置
+            textNode1.innerText="头像:"+val1+";";
+            
+            var sel2Node=document.getElementById("selid2");
+           var val2=sel2Node.options[sel2Node.selectedIndex].value;
+            var cssNode2=document.getElementById("cssid-02");  
+            var textNode2=document.getElementById("textid2");
+            cssNode2.innerHTML="<input type='button' value="+val2+">";  
+            textNode2.innerText="模式:"+val2+";";
+          
+        }
+        
+        /*法二、封装起来*/</script><style type="text/css">#cssid-00{
+            height:300px;
+            width:400px;
+            background:#FFCC00;
+        }
+        #cssid-01{
+            font-size:12px;
+            width:40px;
+            height:40px;
+            background-color:deeppink;
+            margin-left:150px;
+             border-top-left-radius: 150px 30px;
+           border-top-right-radius: 100px 50px;
+          border-bottom-left-radius: 40px 90px;
+         border-bottom-right-radius: 20px 75px;
+        }
+        #cssid-02{  /*身体*/
+            width:80px;
+            height:80px;
+            background:rgba(255,255,255,0.8);
+            margin-left:130px;
+        }
+        #cssid-02 input[type="button"]{ /*可以设置js创建的对象*/
+           background:#000;
+            color:#00ff00;
+            width:80px;
+            height:30px;
+          margin:10px 0px 0px 0px;
+        }
+         #cssid-03{
+            width:20px;
+            height:90px;
+             background-color:coral;
+             margin:-70px 0px 0px 100px;
+            transform:rotate(30deg);
+       border-bottom-left-radius: 20px 60px;
+         border-bottom-right-radius: 20px 60px;
+        }
+         #cssid-04{
+            width:20px;
+            height:90px;
+             background-color:aqua;
+             margin:-90px 0px 0px 220px;
+            transform:rotate(-30deg);
+              border-bottom-left-radius: 20px 60px;
+         border-bottom-right-radius: 20px 60px;
+        }
+         #cssid-05{
+            width:20px;
+            height:140px;
+             background-color:darkgray;
+             margin-left:140px;
+             margin-top:-20px;
+              border-bottom-left-radius: 40px 70px;
+             border-bottom-right-radius: 20px 75px;
+        }
+        #cssid-06{
+            width:20px;
+            height:140px;
+             background-color:dimgray;
+             margin-left:180px;
+            margin-top:-140px;
+         border-bottom-left-radius: 40px 70px;
+         border-bottom-right-radius: 20px 75px;
+        }
+        
+        #textid0,#textid1,#textid2{
+            width:300px;
+            background-color:#CCCCCC;
+        }</style></head><body><div id="cssid-00">请自由选择装扮:<!--背景--><div id="cssid-01"></div><!--头像--><div id="cssid-02"><!--身体部分--><br>*开启模式*</div><div id="cssid-03"><marquee direction="up" behavior="scroll" style="height:80px; text-align:center">我是大白</marquee></div><div id="cssid-04"></div><!--右胳膊--><div id="cssid-05"></div><!--左腿--><div id="cssid-06"></div><!--右腿--></div><p></p><select id="selid0" onchange="change()"><option value="none">--背景--</option><!--value值不能乱改--><option value="blue">蓝色</option><option value="red">红色</option><option value="green">绿色</option><option value="yellow">橙色</option><option value="black">黑色</option></select><select id="selid1" onchange="change()"><option value="none">--头像--</option><option value="images/练习题1.jpg">狗狗</option><option value="images/练习题2.jpg">熊猫</option><option value="images/练习题3.png">微笑的石头</option><option value="images/练习题4.png">疯狂的石头</option><option value="images/练习题5.jpg">大笨钟</option></select><select id="selid2" onchange="change()"><option value="开启模式">--模式--</option><option value="聊天模式">聊天模式</option><option value="学习模式">学习模式</option><option value="游戏模式">游戏模式</option><option value="充电模式">充电模式</option><option value="睡眠模式">睡眠模式</option></select><p></p><div id="textid0">背景：</div><div id="textid1">头像：</div><div id="textid2">按钮：</div></body></html>

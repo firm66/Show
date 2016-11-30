@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><title>js图片库</title><style type="text/css">h1 {
+  color: #333;
+  background-color: transparent;
+}
+.gallery_ul a {
+  color: #c60;
+  background-color: transparent;
+  font-weight: bold;
+  text-decoration: none;
+}
+.gallery_ul ul {
+  padding: 0;
+}
+.gallery_ul li {
+  float: left;
+  padding: 1em;
+  list-style: none;
+}
+img#placeholder{
+  display:block;
+  clear: both;
+}</style></head><body><h1>Snapshots</h1><ul class="gallery_ul"><li><a href="images/fireworks.jpg" title="A fireworks display" onclick="showPic(this); return false;">Fireworks</a></li><li><a href="images/coffee.jpg" title="A cup of black coffee" onclick="showPic(this); return false;">Coffee</a></li><li><a href="images/rose.jpg" title="A red, red rose" onclick="showPic(this); return false;">Rose</a></li><li><a href="images/bigben.jpg" title="The famous clock" onclick="showPic(this); return false;">Big Ben</a><!--return false 取消默认行为--></li></ul><img id="placeholder" src="images/placeholder.gif" alt="my image gallery"><p id="description">Choose an image.</p></body><script>//就这简单的几句，不难
+  function showPic(whichpic) {
+  var source = whichpic.getAttribute("href");  
+  var placeholder = document.getElementById("placeholder");
+  placeholder.setAttribute("src",source);   
+    
+  var text = whichpic.getAttribute("title");
+  var description = document.getElementById("description");
+  description.firstChild.nodeValue = text;   
+}</script></html>

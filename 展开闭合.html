@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>展开闭合</title><script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script><style type="text/css">div.zh_div{
+				border:1px solid #ccc;
+				width:280px;
+			}
+			.zh_ul{
+				list-style-type: none;
+				padding:5px;
+				display: none; /*隐藏*/
+			}
+			li{
+				margin:4px;
+			}
+			h4{
+				background-color:#eee;
+				padding: 5px;
+                height: 23px;
+                line-height: 23px;	
+                cursor: pointer;
+			}
+			.fl{float: left;}
+			.fr{float: right;}</style><script type="text/javascript">$(function(){
+                var $spn = $("#spnTip");
+              $("h4").bind("click", function () {   //点击后相连的动作
+                $(".zh_ul").toggle("slow",function(){
+//三木运算符，“？”前面的布尔值为true则执行“：”前面的那个，反之，则执行“：”后面那个.
+                     $spn.html() == "隐藏" ? $spn.html("显示") : $spn.html("隐藏");
+                    })
+                });
+            });</script></head><body><h3>toggle()方法的展开闭合效果</h3><div class="zh_div"><h4><span class="fl">我喜欢吃的水果</span> <span class="fr" id="spnTip">显示</span></h4><ul class="zh_ul"><li><a href="">苹果</a></li><li><a href="">柑橘</a></li><li><a href="">香蕉</a></li></ul></div></body></html>
