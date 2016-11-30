@@ -1,4 +1,30 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>三级联动菜单</title><script src="js/angular.min.js"></script><link rel="stylesheet" href="css/bootstrap.min.css"></head><body><div style="margin-top:40px"><form ng-controller="firstController" name="myForm" class="container"><div class="form-group"><label class="col-sm-1 control-label" style="margin-top:5px;font-size:18px">出生地:</label><div class="col-sm-2"><select class="form-control" ng-change="data.area=false" ng-model="data.province" ng-options="x.id as x.name for x in cities|cityFilter:0"></select></div><div class="col-sm-2"><select class="form-control" ng-show="data.province" ng-model="data.area" ng-options="x.id as x.name for x in cities|cityFilter:data.province"></select></div><div class="col-sm-2"><select class="form-control" ng-show="data.province && data.area" ng-model="data.city" ng-options="x.id as x.name for x in cities|cityFilter:data.area"></select></div></div></form></div><script type="text/javascript">var app=angular.module('caidanApp',[]);
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三级联动菜单</title>
+		<script src="js/angular.min.js"></script>
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+	<body>
+		<div style="margin-top:40px;">
+			<form ng-controller="firstController" name='myForm' class="container">
+			      <div class="form-group">  
+			        <label class="col-sm-1 control-label" style="margin-top:5px;font-size:18px;">出生地:</label>
+			        <div class="col-sm-2">
+                   <select class="form-control" ng-change="data.area=false" ng-model="data.province" ng-options="x.id as x.name for x in cities|cityFilter:0"></select>
+                    </div>
+                     <div class="col-sm-2">
+                   <select class="form-control" ng-show="data.province" ng-model="data.area" ng-options="x.id as x.name for x in cities|cityFilter:data.province"></select>
+                    </div>
+                     <div class="col-sm-2">
+                   <select class="form-control" ng-show="data.province && data.area" ng-model="data.city" ng-options="x.id as x.name for x in cities|cityFilter:data.area"></select>
+                    </div>
+			    </div>
+			</form>
+		</div>
+		<script type="text/javascript">
+			var app=angular.module('caidanApp',[]);
             app.filter('cityFilter',function(){
                 return function(data,parent){
                     var filterData=[];
@@ -301,4 +327,7 @@
                     }
                 ]; 
 			    }]);
-             angular.bootstrap(document,['caidanApp']);</script></body></html>
+             angular.bootstrap(document,['caidanApp']);
+		</script>
+	</body>
+</html>

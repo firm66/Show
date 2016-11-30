@@ -1,4 +1,10 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>选择样式</title><script type="text/javascript">function change(){
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择样式</title>
+    <script type="text/javascript">
+        function change(){
    var selNode=document.getElementById("selid0");    /*背景*/
     var val=selNode.options[selNode.selectedIndex].value;
             var cssNode=document.getElementById("cssid-00");  
@@ -22,7 +28,10 @@
           
         }
         
-        /*法二、封装起来*/</script><style type="text/css">#cssid-00{
+        /*法二、封装起来*/
+    </script>
+    <style type="text/css">
+        #cssid-00{
             height:300px;
             width:400px;
             background:#FFCC00;
@@ -91,4 +100,58 @@
         #textid0,#textid1,#textid2{
             width:300px;
             background-color:#CCCCCC;
-        }</style></head><body><div id="cssid-00">请自由选择装扮:<!--背景--><div id="cssid-01"></div><!--头像--><div id="cssid-02"><!--身体部分--><br>*开启模式*</div><div id="cssid-03"><marquee direction="up" behavior="scroll" style="height:80px; text-align:center">我是大白</marquee></div><div id="cssid-04"></div><!--右胳膊--><div id="cssid-05"></div><!--左腿--><div id="cssid-06"></div><!--右腿--></div><p></p><select id="selid0" onchange="change()"><option value="none">--背景--</option><!--value值不能乱改--><option value="blue">蓝色</option><option value="red">红色</option><option value="green">绿色</option><option value="yellow">橙色</option><option value="black">黑色</option></select><select id="selid1" onchange="change()"><option value="none">--头像--</option><option value="images/练习题1.jpg">狗狗</option><option value="images/练习题2.jpg">熊猫</option><option value="images/练习题3.png">微笑的石头</option><option value="images/练习题4.png">疯狂的石头</option><option value="images/练习题5.jpg">大笨钟</option></select><select id="selid2" onchange="change()"><option value="开启模式">--模式--</option><option value="聊天模式">聊天模式</option><option value="学习模式">学习模式</option><option value="游戏模式">游戏模式</option><option value="充电模式">充电模式</option><option value="睡眠模式">睡眠模式</option></select><p></p><div id="textid0">背景：</div><div id="textid1">头像：</div><div id="textid2">按钮：</div></body></html>
+        }
+    </style>
+</head>
+<body>
+    <div id="cssid-00">请自由选择装扮:    <!--背景-->
+        <div id="cssid-01"></div> <!--头像--> 
+        <div id="cssid-02">     <!--身体部分-->
+        	<br>
+          *开启模式*
+        </div>
+        <div id="cssid-03">   
+         <marquee direction="up" behavior="scroll" style="height:80px; text-align:center">我是大白</marquee>
+         </div>
+        <div id="cssid-04"></div>    <!--右胳膊-->
+        <div id="cssid-05"></div>     <!--左腿-->
+         <div id="cssid-06"></div>     <!--右腿-->
+    </div>
+    <p></p>
+    <select id="selid0" onchange="change()">
+        <option value="none">--背景--</option>  <!--value值不能乱改-->
+        <option value="blue">蓝色</option>
+        <option value="red">红色</option>
+        <option value="green">绿色</option>
+        <option value="yellow">橙色</option>
+        <option value="black">黑色</option>
+    </select>
+    <select id="selid1" onchange="change()">
+       	<option value="none">--头像--</option>
+		<option value="images/练习题1.jpg">狗狗</option>
+		<option value="images/练习题2.jpg">熊猫</option>
+		<option value="images/练习题3.png">微笑的石头</option>
+		<option value="images/练习题4.png">疯狂的石头</option>
+		<option value="images/练习题5.jpg">大笨钟</option>
+    </select>
+    
+    <select id="selid2" onchange="change()">
+        <option value="开启模式">--模式--</option>
+        <option value="聊天模式">聊天模式</option>
+        <option value="学习模式">学习模式</option>
+        <option value="游戏模式">游戏模式</option>
+        <option value="充电模式">充电模式</option>
+         <option value="睡眠模式">睡眠模式</option>
+    </select>
+    <p></p>
+    <div id="textid0">
+        背景： 
+    </div>
+     <div id="textid1">
+         头像： 
+    </div>
+     <div id="textid2">
+         按钮： 
+    </div>
+</body>
+</html>

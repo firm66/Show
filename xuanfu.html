@@ -1,4 +1,11 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title><link rel="stylesheet" type="text/css" href="xuanfu/jquery-ui.min.css"><style type="text/css">*{padding: 0;margin: 0;}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	  <link rel="stylesheet" type="text/css" href="xuanfu/jquery-ui.min.css"/>
+	  <style type="text/css">
+	  *{padding: 0;margin: 0;}
 	  	.mydiv1,.mydiv2,.mydiv3,.mydiv4,.mydiv5{
 	  		width: 200px;
 	  		height: 200px;
@@ -20,11 +27,26 @@
          /*border: 1px solid gray;*/
          margin-top:-21px; /**/
          line-height: 200px;color:#fff;font-size:30px;text-align: center;
-	  	}</style></head><body><div class="mydiv1">111<div class="fudiv">副本一</div></div><div class="mydiv2">222<div class="fudiv">副本二</div></div><div class="mydiv3">333<div class="fudiv">副本三</div></div><div class="mydiv4">444<div class="fudiv">副本四</div></div><div class="mydiv5">555<div class="fudiv">副本五</div></div><script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script><script src="xuanfu/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script><script type="text/javascript">$(function(){
+	  	}
+	  </style>
+	</head>
+	<body>
+		<div class="mydiv1">111 <div class="fudiv">副本一</div> </div>
+		<div class="mydiv2">222 <div class="fudiv">副本二</div> </div>
+		<div class="mydiv3">333 <div class="fudiv">副本三</div> </div>
+		<div class="mydiv4">444 <div class="fudiv">副本四</div> </div>
+		<div class="mydiv5">555 <div class="fudiv">副本五</div> </div>
+   <script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+   <script src="xuanfu/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+     <script type="text/javascript">
+	  $(function(){
 	  	$(".fudiv").hide();
 	  	$(".mydiv1,.mydiv2,.mydiv3,.mydiv4,.mydiv5").hover(function(){
 	//$(this).find(".fudiv").show().parent().siblings().find(".fudiv").hide();
             $(this).find(".fudiv").effect("clip",{mode:'show',times:1},600)
             .parent().siblings().find(".fudiv").hide();
 	  	});
-	  });</script></body></html>
+	  });
+	  </script>
+	</body>
+</html>

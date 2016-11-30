@@ -1,3 +1,65 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title><link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"></head><body><script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script><script src="js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script><!--下拉列表--><link rel="stylesheet" type="text/css" href="chosen/chosen.css"><script src="chosen/chosen.jquery.js" type="text/javascript" charset="utf-8"></script><!--引入chosen.jquery插件库，里面有很丰富的内容--> <b>带搜索功能的下拉菜单:</b><select data-placeholder="Choose a Country111..." class="chosen-select" style="width:350px" tabindex="2"><option value=""></option><option value="United States">United States</option><option disabled="disabled" value="United Kingdom">United Kingdom</option><option value="Afghanistan">Afghanistan</option><option disabled="disabled" value="Aland Islands">Aland Islands</option><option selected="selected" value="Albania">Albania</option><!--可以设置为禁选状态/选中状态--><option value="Algeria">Algeria</option><option value="American Samoa">American Samoa</option><option value="Andorra">Andorra</option></select><script type="text/javascript">$(".chosen_select").chosen();</script><br><br><br><b>下拉菜单多选:</b><select data-placeholder="Choose a Country222..." class="chosen-select" multiple="multiple" style="width:350px" tabindex="4"><!--可以选多个，并且x掉--><option value=""></option><option value="United States">United States</option><option value="United Kingdom">United Kingdom</option><option value="Afghanistan">Afghanistan</option><option selected="selected" value="Aland Islands">Aland Islands</option><option disabled="disabled" value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option disabled="disabled" value="Zimbabwe">Zimbabwe</option></select><script type="text/javascript">$(".chosen-select").chosen();</script><br><br><br><b>可以直接X掉的下拉菜单:</b><select data-placeholder="Your Favorite Type of Bear" style="width:350px" class="chosen-select-deselect" tabindex="12"><!--单选可以直接X掉--><option value=""></option><option>American Black Bear</option><option>Asiatic Black Bear</option><option>Brown Bear</option><option>Giant Panda</option><option>Sloth Bear</option><option>Sun Bear</option><option>Polar Bear</option><option>Spectacled Bear</option></select><script type="text/javascript">$(".chosen-select-deselect").chosen({
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"/>
+	</head>
+	<body>
+	 <script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	 <script src="js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+  <!--下拉列表-->
+   <link rel="stylesheet" type="text/css" href="chosen/chosen.css"/>
+  <script src="chosen/chosen.jquery.js" type="text/javascript" charset="utf-8"></script>  <!--引入chosen.jquery插件库，里面有很丰富的内容-->
+  <b>带搜索功能的下拉菜单:</b>
+   <select data-placeholder="Choose a Country111..." class="chosen-select" style="width:350px;" tabindex="2">  
+            <option value=""></option>
+            <option value="United States">United States</option>
+            <option disabled value="United Kingdom">United Kingdom</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option disabled value="Aland Islands">Aland Islands</option>
+            <option selected value="Albania">Albania</option>   <!--可以设置为禁选状态/选中状态-->
+            <option value="Algeria">Algeria</option>
+            <option value="American Samoa">American Samoa</option>
+            <option value="Andorra">Andorra</option>
+  </select>
+  <script type="text/javascript">
+    $(".chosen_select").chosen();
+  </script>
+       <br><br><br>
+        
+        
+         <b>下拉菜单多选:</b>
+          <select data-placeholder="Choose a Country222..." class="chosen-select" multiple style="width:350px;" tabindex="4">  <!--可以选多个，并且x掉-->
+            <option value=""></option>
+            <option value="United States">United States</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option selected value="Aland Islands">Aland Islands</option>
+            <option disabled value="Yemen">Yemen</option>
+            <option value="Zambia">Zambia</option>
+            <option disabled value="Zimbabwe">Zimbabwe</option>
+          </select>
+  <script type="text/javascript">
+  	  $(".chosen-select").chosen();
+  </script>
+  
+      <br><br><br><b>可以直接X掉的下拉菜单:</b>
+          <select data-placeholder="Your Favorite Type of Bear" style="width:350px;" class="chosen-select-deselect" tabindex="12"> <!--单选可以直接X掉-->
+            <option value=""></option>
+            <option>American Black Bear</option>
+            <option>Asiatic Black Bear</option>
+            <option>Brown Bear</option>
+            <option>Giant Panda</option>
+            <option>Sloth Bear</option>
+            <option>Sun Bear</option>
+            <option>Polar Bear</option>
+            <option>Spectacled Bear</option>
+          </select>
+       <script type="text/javascript">
+       	 $(".chosen-select-deselect").chosen({
        	 	"allow_single_deselect": true
-       	 });</script></body></html>
+       	 });
+       </script>
+	</body>
+</html>

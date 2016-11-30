@@ -1,1 +1,103 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1"><title></title><link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5.min.css"><link rel="stylesheet" type="text/css" href="css/时间表.css"></head><body><div data-role="page" id="pageone"><div data-role="panel" id="myPanel"><!--侧拉栏--><div id="bg"><img src="images/12a.jpg" class="image_1"> <span>游客324254353</span></div><ul data-role="listview"><li><a href="#" class="ui-btn ui-icon-clock ui-btn-icon-left">提醒</a></li><li><a href="#" class="ui-btn ui-icon-cloud ui-btn-icon-left">标签</a></li><li><a href="#" class="ui-btn ui-icon-grid ui-btn-icon-left">导出/备份</a></li><li><a href="#" class="ui-btn ui-icon-gear ui-btn-icon-left">设置</a></li><li><a href="#" class="ui-btn ui-icon-heart ui-btn-icon-left">关于</a></li><li><a href="#" class="ui-btn ui-icon-mail ui-btn-icon-left">登录</a></li></ul></div><div data-role="header"><a href="#myPanel" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-left">&nbsp;</a><h1>我的日程</h1><a href="#myPopup" data-rel="popup" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-left" data-position-to="window">&nbsp;</a></div><!--弹窗--><div data-role="popup" id="myPopup" class="ui-content" data-transition="slideup" data-overlay-theme="b"><!--data-overlay-theme="b"带遮罩层--><ul data-role="listview"><li><a href="#new_reminder" class="ui-btn">新建提醒</a></li><!-- <li><a href="#" class="ui-btn ui-icon-grid ui-btn-icon-left">语音输入</a></li>--><li><a href="#" class="ui-btn">新建待办事项</a></li><li><a href="#" class="ui-btn">种子习惯</a></li><li><a href="#" class="ui-btn">取消</a></li></ul></div><div data-role="main" class="ui-content" style="min-height:500px; background:url(images/567.jpg);background-size:100%"><div class="ui-grid-solo"><div class="ui-block-a" id="savethis"><a id="richeng_1" href="#" class="ui-btn ui-corner-all ui-shadow">向左滑动删除</a> <a href="#" class="ui-btn ui-corner-all ui-shadow">待办事项二</a></div></div></div><div data-role="footer" style="text-align:center"><div class="ui-grid-c"><div class="ui-block-a"><a href="时间表.html" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-top">&nbsp;日程&nbsp;</a><br></div><div class="ui-block-b"><a href="" class="ui-btn ui-corner-all ui-icon-shop ui-btn-icon-top">&nbsp;今天&nbsp;</a><br></div><div class="ui-block-c"><a href="" class="ui-btn ui-corner-all ui-icon-tag ui-btn-icon-top">时间轴</a><br></div><div class="ui-block-d"><a href="" class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-top">&nbsp;好友&nbsp;</a><br></div></div></div></div><!--其他内容--><div data-role="page" id="new_reminder"><!--新建提醒页面--><div data-role="header"><a href="时间表.html" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">&nbsp;</a><h1>新建日程</h1><a href="" class="ui-btn" id="save">保存</a></div><div data-role="main"><form method="post" id="form_richeng"><input type="text" class="todo" placeholder="提醒做什么?" style="height:80px"> <input type="datetime-local"><select name="music" id="music"><option value="mon">短提示音</option><option value="tue">长提示音</option><option value="wed">音乐一</option><option value="thu">音乐二</option></select><select name="day" id="day"><option value="mon">学习</option><option value="tue">看书</option><option value="wed">运动</option><option value="thu">旅游</option><option value="fri">敲代码</option><option value="sat">去图书馆</option><option value="sun">练车</option></select></form></div></div><script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script><script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript" charset="utf-8"></script><script src="js/时间表.js" type="text/javascript" charset="utf-8"></script></body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">  
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/时间表.css"/>
+	</head>
+	<body>
+		
+ <div data-role="page" id="pageone">
+  <div data-role="panel" id="myPanel">   <!--侧拉栏-->
+  	<div id="bg">
+  	 <img src="images/12a.jpg" class="image_1"/>
+     <span>游客324254353</span>
+  	</div>
+    <ul data-role="listview">
+      <li><a href="#" class="ui-btn ui-icon-clock ui-btn-icon-left">提醒</a></li>
+      <li><a href="#" class="ui-btn ui-icon-cloud ui-btn-icon-left">标签</a></li>
+      <li><a href="#" class="ui-btn ui-icon-grid ui-btn-icon-left">导出/备份</a></li>
+      <li><a href="#" class="ui-btn ui-icon-gear ui-btn-icon-left">设置</a></li>
+      <li><a href="#" class="ui-btn ui-icon-heart ui-btn-icon-left">关于</a></li>
+      <li><a href="#" class="ui-btn ui-icon-mail ui-btn-icon-left">登录</a></li>
+    </ul>
+  </div> 
+
+   <div data-role="header">
+    <a href="#myPanel" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-left">&nbsp;</a>
+    <h1>我的日程</h1>
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-left" data-position-to="window">&nbsp;</a>
+  </div>
+        <!--弹窗-->
+      <div data-role="popup" id="myPopup" class="ui-content" data-transition="slideup" data-overlay-theme="b">  <!--data-overlay-theme="b"带遮罩层-->
+      <ul data-role="listview">
+      <li><a href="#new_reminder" class="ui-btn">新建提醒</a></li>
+     <!-- <li><a href="#" class="ui-btn ui-icon-grid ui-btn-icon-left">语音输入</a></li>-->
+       <li><a href="#" class="ui-btn">新建待办事项</a></li>
+       <li><a href="#" class="ui-btn">种子习惯</a></li>
+      <li><a href="#" class="ui-btn">取消</a></li>
+    </ul>
+    </div>
+  <div data-role="main" class="ui-content"  style="min-height:500px; background:url(images/567.jpg);background-size:100%;">
+    <div class="ui-grid-solo">
+      <div class="ui-block-a" id="savethis">
+        <a id="richeng_1" href="#" class="ui-btn ui-corner-all ui-shadow">向左滑动删除</a>
+         <a href="#" class="ui-btn ui-corner-all ui-shadow">待办事项二</a>
+      </div>
+    </div>
+  </div>
+
+  <div data-role="footer" style="text-align:center;">
+    <div class="ui-grid-c">
+      <div class="ui-block-a">
+        <a href="时间表.html" class="ui-btn ui-corner-all ui-icon-calendar ui-btn-icon-top">&nbsp;日程&nbsp;</a><br>
+      </div>
+      <div class="ui-block-b">
+        <a href="" class="ui-btn ui-corner-all ui-icon-shop  ui-btn-icon-top">&nbsp;今天&nbsp;</a><br>
+      </div>
+      <div class="ui-block-c">
+        <a href="" class="ui-btn ui-corner-all ui-icon-tag  ui-btn-icon-top">时间轴</a><br>
+      </div>
+      <div class="ui-block-d">
+        <a href="" class="ui-btn ui-corner-all ui-icon-user  ui-btn-icon-top">&nbsp;好友&nbsp;</a><br>
+      </div>  
+  </div> 
+</div>
+ </div>
+
+<!--其他内容-->
+  <div data-role="page" id="new_reminder">   <!--新建提醒页面-->
+  <div data-role="header">
+  	 <a href="时间表.html" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">&nbsp;</a>
+    <h1>新建日程</h1>
+     <a href="" class="ui-btn" id="save">保存</a>
+  </div>
+  <div data-role="main">
+    <form method="post" id="form_richeng">
+    <input type="text" class="todo" placeholder="提醒做什么?" style="height:80px;">
+    <input type="datetime-local"/>
+        <select name="music" id="music">
+         <option value="mon">短提示音</option>
+         <option value="tue">长提示音</option>
+         <option value="wed">音乐一</option>
+         <option value="thu">音乐二</option>
+        </select>
+    
+        <select name="day" id="day">
+         <option value="mon">学习</option>
+         <option value="tue">看书</option>
+         <option value="wed">运动</option>
+         <option value="thu">旅游</option>
+         <option value="fri">敲代码</option>
+         <option value="sat">去图书馆</option>
+         <option value="sun">练车</option>
+        </select>
+    </form>
+  </div>
+</div> 
+       <script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/时间表.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

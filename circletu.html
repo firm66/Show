@@ -1,4 +1,15 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>环形图</title><script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script><script src="http://echarts.baidu.com/build/dist/echarts.js"></script></head><body><div id="circle_main" style="width: 600px;height:360px"></div><script type="text/javascript">//路径配置,第一步
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>环形图</title>
+		<script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		  <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+	</head>
+	<body>
+	 <div id="circle_main" style="width: 600px;height:360px;"></div>
+		<script type="text/javascript">    
+		//路径配置,第一步
 		  require.config({    
             paths:{   
                  echarts: 'http://echarts.baidu.com/build/dist'
@@ -223,7 +234,13 @@ option = {
                     
 			 myChart.setOption(option); 
 			 }
-           );</script><div id="circle_main2" style="width: 600px;height:330px"></div><script type="text/javascript">//路径配置
+           );
+		</script>
+		
+		
+		<div id="circle_main2" style="width: 600px;height:330px;"></div>
+		<script type="text/javascript">    
+		//路径配置
 		  require.config({    
             paths:{   
                  echarts: 'http://echarts.baidu.com/build/dist'
@@ -380,8 +397,6 @@ option = {
 };
                     
 			  myChart.setOption(option); 
-			 }
-           );</script></body></html>	  myChart.setOption(option); 
 			 }
            );
 		</script>

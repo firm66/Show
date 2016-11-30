@@ -1,4 +1,17 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title>jqueryUI提供的视觉特效</title><link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.min.css"></head><body><img id="img1" src="images/a.jpg" width="240px" height="300px"> <img id="img2" src="images/b.jpg" width="240px" height="300px"><script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script><script src="jqueryui/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script><script type="text/javascript">$(document).ready(function(){
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jqueryUI提供的视觉特效</title>
+		<link rel="stylesheet" type="text/css" href="jqueryui/jquery-ui.min.css"/>
+	</head>
+	<body>
+		<img id="img1" src="images/a.jpg" width="240px" height="300px"/>
+		<img id="img2" src="images/b.jpg" width="240px" height="300px"/>
+<script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+<script src="jqueryui/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
 			$("#img1").effect("blind",{mode:'hide',direction:'horizontal'},1000); //effect()方法，blind显示隐藏特效
 			$("#img2").effect("blind",{mode:'show',direction:'horizontal'},1000); //图二滑入图一位置,horizontal水平，vertical垂直
 					
@@ -8,4 +21,7 @@
 					$("#img2").effect("pulsate",{times:2},1000); //闪动效果
 					$("#img2").delay(3100).effect("shake",{times:3,direction:'up'},1000); //震动效果，delay()方法设置时间的延迟
 				    
-		});</script></body></html>
+		});
+		</script>
+	</body>
+</html>

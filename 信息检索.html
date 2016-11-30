@@ -1,4 +1,22 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>过滤器的使用</title><script src="js/angular.min.js"></script></head><body><!--可以根据书名，作者，时间等，随意搜索--><div ng-controller="libraryCtrl" style="border:1px solid #ddd;padding:10px;width:300px">信息检索:<input type="text" ng-model="test"><ul><li ng-repeat="x in library | filter:test | orderBy:'categories'">{{ x.book + ', ' + (x.categories | uppercase) }}<!--注意括号--></li></ul></div><script type="text/javascript">var app=angular.module("jiansuoApp",[]);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器的使用</title>
+     <script src="js/angular.min.js"></script>
+</head>
+<body>
+   <!--可以根据书名，作者，时间等，随意搜索--> 
+    <div ng-controller="libraryCtrl" style="border:1px solid #ddd;padding:10px;width:300px;">
+    信息检索:<input type="text" ng-model="test">
+  <ul>
+    <li ng-repeat="x in library | filter:test | orderBy:'categories'">  
+     {{ x.book + ', ' + (x.categories | uppercase) }}  <!--注意括号-->
+    </li>
+  </ul>
+</div>
+<script type="text/javascript">
+    var app=angular.module("jiansuoApp",[]);
          app.controller('libraryCtrl',function($scope){
             $scope.library=[   /*这些是对象*/
                 {book:'head first html5',categories:'html'},
@@ -13,4 +31,7 @@
                 {book:'angular.js',categories:'js'},
             ]; 
          });
-      angular.bootstrap(document,['jiansuoApp']);   //angular手动启动方式：不用写ng-app,添上这句话</script></body></html>
+      angular.bootstrap(document,['jiansuoApp']);   //angular手动启动方式：不用写ng-app,添上这句话
+    </script>
+</body>
+</html>

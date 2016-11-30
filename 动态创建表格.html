@@ -1,4 +1,10 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>动态创建修改表格</title><script type="text/javascript">function createTab(){
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态创建修改表格</title>
+    <script type="text/javascript">
+         function createTab(){
     var tabNode=document.createElement("table");
              //获取用户输入的行数和列数
         tabNode.setAttribute("id","tabid");
@@ -44,7 +50,10 @@
             else{
                 alert("删除的列不存在");
             }
-        }</script><style type="text/css">table{
+        }
+    </script>
+    <style type="text/css">
+         table{
           border:1px solid #0066FF;
             width:60%;
         }
@@ -54,4 +63,17 @@
         }
         table td{
              border:1px solid #003399;
-        }</style></head><body>行：<input type="text" name="rownum"><br>列：<input type="text" name="colnum"><br><input type="button" value="创建表格" onclick="createTab()"><br><input type="text" name="delrow"> <input type="button" value="删除行" onclick="delRow()"><br><input type="text" name="delcol"> <input type="button" value="删除列" onclick="delCol()"><br><div id="create_table"></div></body></html>
+        }
+    </style>
+</head>
+<body>
+     行：<input type="text" name="rownum"><br>
+     列：<input type="text" name="colnum"><br>
+      <input type="button" value="创建表格" onclick="createTab()"> <br>
+       <input type="text" name="delrow"> 
+       <input type="button" value="删除行" onclick="delRow()"> <br>
+     <input type="text" name="delcol"> 
+     <input type="button" value="删除列" onclick="delCol()"><br>
+    <div id="create_table"></div>
+</body>
+</html>

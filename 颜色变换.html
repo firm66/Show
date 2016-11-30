@@ -1,9 +1,26 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><title></title><script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script><style type="text/css">.myDiv{
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.myDiv{
 				width:400px;height:80px;
 				border:1px solid gray;
 				background-color:#F5F0E5;
-			}</style></head><body><button class="btn">颜色变换</button><div class="myDiv"></div><script type="text/javascript">$(".btn").click(function(){
+			}
+		</style>
+	</head>
+	<body>
+		<button class="btn">颜色变换</button>
+		<div class="myDiv"></div>
+		<script type="text/javascript">
+			$(".btn").click(function(){
 				$(".myDiv").css("display","none");
 				$(".myDiv").slideDown();
 				$(".myDiv").css("background-color",'#' + Math.floor( Math.random() * 16777215 ).toString( 16 ));
-			})</script></body></html>
+			})
+		</script>
+	</body>
+</html>
