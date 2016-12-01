@@ -3,16 +3,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>环形图</title>
-		  <script src="//echarts.baidu.com/build/dist/echarts.js"></script>
-		  <script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		  <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
 	</head>
 	<body>
-	 <div id="circle_main" style="width: 600px;height:360px;"></div>
+	 <div id="circle_main" style="width: 600px;height:380px;"></div>
 		<script type="text/javascript">    
 		//路径配置,第一步
 		  require.config({    
             paths:{   
-                 echarts: '//echarts.baidu.com/build/dist'
+                 echarts: 'http://echarts.baidu.com/build/dist'
             }  
         });  
           // 使用 ，第二步
@@ -243,7 +243,7 @@ option = {
 		//路径配置
 		  require.config({    
             paths:{   
-                 echarts: '//echarts.baidu.com/build/dist'
+                 echarts: 'http://echarts.baidu.com/build/dist'
             }  
         });  
           // 使用 
@@ -254,7 +254,7 @@ option = {
             ],  
              function (ec) {  
                 // 基于准备好的dom，初始化echarts图表  
-			 var myChart2 = ec.init(document.getElementById('circle_main2')); 
+			 var myChart2= ec.init(document.getElementById('circle_main2')); 
 			 
 
 function createRandomItemStyle() {
@@ -272,7 +272,7 @@ function createRandomItemStyle() {
 option = {
     title: {
         text: 'firm66\'s blog',
-        link: '//www.google.com/trends/hottrends'
+        link: 'http://www.google.com/trends/hottrends'
     },
     tooltip: {
         show: true
@@ -394,8 +394,7 @@ option = {
             }
         ]
     }]
-};
-                    
+};         
 			  myChart2.setOption(option); 
 			 }
            );
