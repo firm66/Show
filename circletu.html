@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>环形图</title>
-		<script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 		  <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+		  <script src="js/jq-1.11.3.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 	 <div id="circle_main" style="width: 600px;height:360px;"></div>
@@ -254,7 +254,7 @@ option = {
             ],  
              function (ec) {  
                 // 基于准备好的dom，初始化echarts图表  
-			 var myChart = ec.init(document.getElementById('circle_main2')); 
+			 var myChart2 = ec.init(document.getElementById('circle_main2')); 
 			 
 
 function createRandomItemStyle() {
@@ -396,7 +396,7 @@ option = {
     }]
 };
                     
-			  myChart.setOption(option); 
+			  myChart2.setOption(option); 
 			 }
            );
 		</script>
